@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demo Site — Home</title>
+    <!-- The analytics snippet, exactly as a customer would install it -->
+    <script defer src="http://localhost:4000/tracker.js" data-site-id="AJxVJ7hMY1Si"></script>
+    <style>
+      body { font-family: sans-serif; max-width: 640px; margin: 60px auto; line-height: 1.6; }
+      nav a { margin-right: 16px; }
+      button { padding: 10px 18px; font-size: 15px; cursor: pointer; margin-right: 10px; }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/blog.html">Blog</a>
+    </nav>
+    <h1>Demo site being tracked</h1>
+    <p>Every page you visit here fires a pageview to Nano Analytics. The buttons fire custom events.</p>
+    <button onclick="nano.track('signup')">Sign up (custom event)</button>
+    <button onclick="nano.track('download_ebook')">Download ebook (custom event)</button>
+  </body>
+</html>

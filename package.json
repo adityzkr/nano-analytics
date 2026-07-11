@@ -1,0 +1,13 @@
+{
+  "name": "analytics",
+  "private": true,
+  "workspaces": [
+    "server",
+    "web",
+    "sdk"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev -w server",
+    "dev:web": "npm run dev -w web"
+  }
+}
