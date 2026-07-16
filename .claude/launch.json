@@ -18,6 +18,18 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8080", "--directory", "demo-site"],
       "port": 8080
+    },
+    {
+      "name": "api-id",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--workspace", "server", "--prefix", "identified"],
+      "port": 4100
+    },
+    {
+      "name": "web-id",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--workspace", "web", "--prefix", "identified"],
+      "port": 5174
     }
   ]
 }

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Identified Variant Demo</title>
+    <!-- IDENTIFIED tracker (port 4100) — site id is filled in after creating the site -->
+    <script defer src="http://localhost:4100/tracker.js" data-site-id="eztx8eyxoIRD"></script>
+    <style>
+      body { font-family: sans-serif; max-width: 640px; margin: 60px auto; line-height: 1.6; }
+      input, button { padding: 9px 14px; font-size: 15px; margin-right: 8px; }
+      .row { margin: 14px 0; }
+    </style>
+  </head>
+  <body>
+    <h1>Identified tracking demo</h1>
+    <p>
+      This page uses the <strong>identified</strong> tracker: your browser gets a persistent ID in
+      localStorage (<code>nano_vid</code>), so reloads and return visits count as the same visitor.
+    </p>
+    <div class="row">
+      <input id="email" type="email" placeholder="you@example.com" />
+      <input id="name" type="text" placeholder="Your name" />
+      <button onclick="nano.identify({ email: document.getElementById('email').value, name: document.getElementById('name').value, plan: 'trial' })">
+        Identify me
+      </button>
+    </div>
+    <div class="row">
+      <button onclick="nano.track('purchase')">Buy now (custom event)</button>
+      <button onclick="nano.reset()">Log out (reset identity)</button>
+    </div>
+  </body>
+</html>
